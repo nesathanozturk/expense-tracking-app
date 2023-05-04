@@ -9,6 +9,14 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.5rem;
+
+  @media (max-width: 632px) {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  @media (max-width: 568px) {
+    place-items: center;
+  }
 `;
 
 export const ProductCardBox = styled.div`

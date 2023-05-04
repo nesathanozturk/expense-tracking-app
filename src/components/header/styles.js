@@ -11,6 +11,10 @@ export const HeaderContainer = styled.header`
 export const Text = styled.h1`
   font-size: 2.2rem;
   letter-spacing: 0.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Money = styled.span`
