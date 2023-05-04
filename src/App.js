@@ -1,12 +1,13 @@
 import { useState } from "react";
+import Header from "./components/header/Header";
 
 const App = () => {
   const [para, setPara] = useState(2000000);
 
   return (
-    <div>
-      <h1>qweeewq</h1>
-    </div>
+    <>
+      <Header para={para} />
+    </>
   );
 };
 
