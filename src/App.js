@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Header para={para} />
-      <Products />
+      <Products para={para} setPara={setPara} />
     </>
   );
 };

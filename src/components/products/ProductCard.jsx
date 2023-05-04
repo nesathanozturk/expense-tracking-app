@@ -11,7 +11,7 @@ import {
   PurchaseButton,
 } from "./styles";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, para, setPara, buyProduct, sellProduct }) => {
   return (
     <>
       <ProductCardBox>
@@ -23,9 +23,11 @@ const ProductCard = ({ product }) => {
           <ProductPrice>{product.price} TL</ProductPrice>
         </ProductInfo>
         <ProductBottom>
-          <SellButton>Sat</SellButton>
+          <SellButton onClick={() => sellProduct(product.id)}>Sat</SellButton>
           <ProductAmount>{product.amount}</ProductAmount>
-          <PurchaseButton>Satın al</PurchaseButton>
+          <PurchaseButton onClick={() => buyProduct(product.id)}>
+            Satın al
+          </PurchaseButton>
         </ProductBottom>
       </ProductCardBox>
     </>
