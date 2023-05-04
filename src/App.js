@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./components/header/Header";
+import Products from "./components/products/Products";
 
 const App = () => {
   const [para, setPara] = useState(2000000);
@@ -7,6 +8,7 @@ const App = () => {
   return (
     <>
       <Header para={para} />
+      <Products />
     </>
   );
 };
