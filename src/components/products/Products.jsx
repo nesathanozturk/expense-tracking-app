@@ -14,7 +14,7 @@ const Products = ({ para, setPara }) => {
     let newPrice = para - productPrice;
 
     if (newPrice < 0 || para < productPrice) {
-      alert("Daha harcanacak paranız kalmadı! Bir şeyler sat!");
+      alert("Bunu almak için yeterli paran yok! Bir şeyler sat!");
     } else {
       product[item].amount++;
       setPara(newPrice);
