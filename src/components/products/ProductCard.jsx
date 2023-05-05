@@ -5,10 +5,9 @@ import {
   ProductInfo,
   ProductName,
   ProductPrice,
-  ProductBottom,
-  SellButton,
+  Buttons,
+  Button,
   ProductAmount,
-  PurchaseButton,
 } from "./styles";
 
 const ProductCard = ({ product, para, setPara, buyProduct, sellProduct }) => {
@@ -22,13 +21,13 @@ const ProductCard = ({ product, para, setPara, buyProduct, sellProduct }) => {
           <ProductName>{product.name}</ProductName>
           <ProductPrice>{product.price} TL</ProductPrice>
         </ProductInfo>
-        <ProductBottom>
-          <SellButton onClick={() => sellProduct(product.id)}>Sat</SellButton>
+        <Buttons>
+          <Button $sellButton onClick={() => sellProduct(product.id)}>
+            Sat
+          </Button>
           <ProductAmount>{product.amount}</ProductAmount>
-          <PurchaseButton onClick={() => buyProduct(product.id)}>
-            Satın al
-          </PurchaseButton>
-        </ProductBottom>
+          <Button onClick={() => buyProduct(product.id)}>Satın al</Button>
+        </Buttons>
       </ProductCardBox>
     </>
   );

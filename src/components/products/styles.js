@@ -10,11 +10,11 @@ export const Container = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.5rem;
 
-  @media (max-width: 632px) {
+  @media (width <= 632px) {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 
-  @media (max-width: 568px) {
+  @media (width <= 568px) {
     place-items: center;
   }
 `;
@@ -67,31 +67,32 @@ export const ProductBottom = styled.p`
   border: 1px solid #ccc;
 `;
 
-export const SellButton = styled.button`
-  width: 9.375rem;
-  background-color: #f44336;
-  color: #fff;
-  border: none;
-  padding: 1rem 1rem;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #d32f2f;
-  }
+export const Buttons = styled.button`
+  background: #f1f1f1;
+  width: 100%;
+  margin-top: 1rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
 `;
 
-export const PurchaseButton = styled.button`
-  background-color: #4caf50;
+export const Button = styled.button`
+  background-color: ${(props) => (props.$sellButton ? "#f44336" : "#4caf50")};
   color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  padding: 1rem 1.4rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: #388e3c;
+    background-color: ${(props) => (props.$sellButton ? "#d32f2f" : "#388e3c")};
   }
 `;
 
 export const ProductAmount = styled.p`
-  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
 `;
