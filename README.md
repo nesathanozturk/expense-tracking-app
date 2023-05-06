@@ -1,6 +1,6 @@
 <h1>About</h1>
 
-<p>This repository is expense tracker project.<p>
+<p>This repository is Expense Tracking App project.<p>
 
 ## 🧰 Technologies Used
 
